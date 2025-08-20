@@ -61,12 +61,6 @@ Pastikan Anda telah menginstal:
     ```
     Aplikasi akan berjalan dan bisa diakses di `http://localhost:5173` (atau port lain yang tersedia).
 
-5.  **Untuk membangun versi produksi:**
-    ```bash
-    npm run build
-    ```
-    Hasil build akan tersedia di dalam folder `dist/`.
-
 ---
 
 ## 📁 Struktur Proyek
