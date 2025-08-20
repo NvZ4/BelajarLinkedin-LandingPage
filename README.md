@@ -91,9 +91,7 @@ belajar-linkedin-react/
 │   └── main.jsx
 ├── .eslintrc.cjs
 ├── .gitignore
-├── index.html
 ├── package.json
-├── postcss.config.js
 ├── README.md
 └── tailwind.config.js
 ```
