@@ -1,4 +1,3 @@
-// src/components/Header.jsx
 import React, { useState, useEffect } from 'react';
 import { HiOutlineMenu } from 'react-icons/hi';
 import { IoClose } from "react-icons/io5";
@@ -15,16 +14,15 @@ const navLinks = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // State baru untuk melacak section yang aktif
   const [activeSection, setActiveSection] = useState('#home');
 
   useEffect(() => {
     const sections = navLinks.map(link => document.querySelector(link.href));
 
     const observerOptions = {
-      root: null, // Mengamati viewport
+      root: null, 
       rootMargin: '0px',
-      threshold: 0.5 // Section dianggap aktif jika 50% terlihat
+      threshold: 0.5 
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -39,7 +37,6 @@ const Header = () => {
       if (section) observer.observe(section);
     });
 
-    // Cleanup observer saat komponen di-unmount
     return () => {
       sections.forEach(section => {
         if (section) observer.unobserve(section);
@@ -70,7 +67,6 @@ const Header = () => {
                   className={`relative font-medium transition-colors duration-300 ${isActive ? 'text-blue-600' : 'text-gray-500 hover:text-blue-600'}`}
                 >
                   {link.text}
-                  {/* Garis bawah biru yang aktif */}
                   <span
                     className={`absolute left-0 -bottom-1 h-0.5 bg-blue-600 transition-all duration-300 ${isActive ? 'w-full' : 'w-0'}`}
                   ></span>

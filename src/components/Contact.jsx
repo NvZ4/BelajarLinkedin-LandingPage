@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { MdOutlineEmail, MdOutlinePhone, MdOutlineLocationOn } from 'react-icons/md';
 
 const Contact = () => {
-  // State untuk mengelola input form
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,10 +18,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Di aplikasi nyata, di sini Anda akan mengirim data ke backend atau layanan email
     alert('Terima kasih! Pesan Anda telah kami terima.');
     console.log('Form data submitted:', formData);
-    // Reset form
     setFormData({ name: '', email: '', message: '' });
   };
 
